@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Set streaming mode"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"/>
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/streamingSwitch"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"/>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/inter_load_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="interstitial load ad" />
+
+            <Button
+                android:id="@+id/inter_show_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inter_load_button"
+                android:text="interstitial show ad" />
+
+            <Button
+                android:id="@+id/full_screen_load_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inter_show_button"
+                android:text="fullscreen load ad" />
+
+            <Button
+                android:id="@+id/full_screen_show_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/full_screen_load_button"
+                android:text="fullscreen show ad" />
+
+            <Button
+                android:id="@+id/multi_rewarded_load_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/full_screen_show_button"
+                android:text="multi rewarded load ad" />
+
+            <Button
+                android:id="@+id/multi_rewarded_show_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/multi_rewarded_load_button"
+                android:text="multi rewarded show ad" />
+
+            <Button
+                android:id="@+id/normal_rewarded_load_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/full_screen_show_button"
+                android:text="normal rewarded load ad" />
+
+            <Button
+                android:id="@+id/normal_rewarded_show_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/multi_rewarded_load_button"
+                android:text="normal rewarded show ad" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+
+                android:id="@+id/spinner"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.appnext.banners.BannerView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner1"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ads:bannerSize="BANNER"
+                    ads:placementId="42292b94-f4b8-48b5-a821-80c9e123f0c6"/>
+
+                <com.appnext.banners.BannerView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner2"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ads:bannerSize="LARGE_BANNER"
+                    ads:placementId="8836c5ec-0a78-48a4-bec4-d6682a4a4d36"/>
+
+                <com.appnext.banners.BannerView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/banner3"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ads:bannerSize="MEDIUM_RECTANGLE"
+                    ads:placementId="8836c5ec-0a78-48a4-bec4-d6682a4a4d36"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
